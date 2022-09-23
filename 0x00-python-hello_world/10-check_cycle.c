@@ -5,25 +5,18 @@
  *@list: pointer to listint_t
  *Return: int
  */
+
 int check_cycle(listint_t *list)
 {
-listint_t *jump, *node;
+	listint_t *slow = list;
+	listint_t *fast = list;
 
-if (!list || !list->next)
-return (0);
-
-node = list;
-jump = list->next;
-
-while (jump && jump->next && node && node->next)
-{
-if (jump == node)
-return (1);
-jump = jump->next->next;
-if (!jump)
-
-break;
-node = node->next;
-}
-return (0);
+	while (fast != NULL && fast->next != NULL)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+		if (fast == slow)
+			return (1);
+	}
+	return (0);
 }
