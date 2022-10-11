@@ -22,7 +22,7 @@ class Square:
         elif value < 0:
             raise ValueError('size must be >= 0')
         else:
-            self.size = value 
+            self.__size = value 
     """Function to calculate area of a square object"""
     def area(self):
         result = self.size(self)
