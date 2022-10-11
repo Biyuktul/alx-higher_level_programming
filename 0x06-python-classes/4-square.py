@@ -5,9 +5,15 @@
 class Square:
     """Constructor"""
     def __init__(self, size=0):
-        size(size)
+        if type(sie) != int:
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
+        else:
+            self.__size = size
+
     """Getter"""
-    def size():
+    def size(self):
         return self.__size
     """Setter"""
     def size(self, value):
@@ -15,7 +21,9 @@ class Square:
             raise TypeError('size must be an integer')
         elif value < 0:
             raise ValueError('size must be >= 0')
+        else:
+            self.size = value 
     """Function to calculate area of a square object"""
     def area(self):
-        result = size()
+        result = self.size(self)
         return result ** 2
