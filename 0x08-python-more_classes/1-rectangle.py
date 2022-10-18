@@ -5,15 +5,18 @@
 class Rectangle:
     """Rectangle class with 2 private instance members"""
     def __init__(self, width=0, height=0):
+        """Initilizing"""
         self.__width = width
         self.__height = height
 
     @width.property
     def width(self):
+        """Returns width instance variable"""
         return (self.width)
 
     @width.setter
     def width(self, value):
+        """sets value to width instance varible"""
         if value < 0:
             raise ValueError("width must be >= 0")
         if (isinstance(value, int)):
@@ -23,10 +26,12 @@ class Rectangle:
 
     @height.property
     def height(self):
+        """Returns width instance variable"""
         return (self.height)
 
     @height.setter
     def height(self, value):
+        """Sets value to height instance variable"""
         if value < 0:
             raise ValueError("height must be >= 0")
         if (isinstance(int, value)):
