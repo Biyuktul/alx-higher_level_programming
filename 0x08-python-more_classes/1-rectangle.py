@@ -9,7 +9,7 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-    @width.property
+    @property
     def width(self):
         """Returns width instance variable"""
         return (self.width)
@@ -24,7 +24,7 @@ class Rectangle:
         else:
             raise TypeError("width must be an integer")
 
-    @height.property
+    @property
     def height(self):
         """Returns width instance variable"""
         return (self.height)
