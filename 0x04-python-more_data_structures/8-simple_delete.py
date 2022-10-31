@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""Simple dictionary key deletion"""
+
+
 def simple_delete(a_dictionary, key=""):
-    if a_dictionary.get(key) is not None:
-        del a_dictionary[key]
-    return (a_dictionary)
+    """Deletes a dictionary key"""
+    keys = list(a_dictionary.keys())
+    if key not in keys:
+        return a_dictionary
+
+    a_dictionary.pop(key, None)
+    return a_dictionary
