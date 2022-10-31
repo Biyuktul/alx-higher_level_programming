@@ -1,19 +1,24 @@
 #!/usr/bin/python3
 """ Roman to Integer test file
 """
-roman_to_int = __import__('12-roman_to_int').roman_to_int
 
-roman_number = "X"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = "VII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+def roman_to_int(roman_string):
+    """Converts roman number to coresponding integer number"""
+    if not roman_string or not isinstance(roman_string, str):
+        return 0
 
-roman_number = "IX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "DCCVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+    roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
+             'C': 100, 'D': 500, 'M': 1000,
+             'IV': 4, 'IX': 9, 'XL': 40, 'XC': 90,
+             'CD': 400, 'CM': 900}
+    i = 0
+    number = 0
+    while i < len(roman_string):
+        if i + 1 < len(roman_string) and roman_string[i:i+2] in roman:
+            number += roman[roman_string[i:i+2]]
+            i += 2
+        else:
+            number += roman[roman_string[i]]
+            i += 1
+    return number
