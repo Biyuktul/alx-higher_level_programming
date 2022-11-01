@@ -7,16 +7,32 @@ def roman_to_int(roman_string):
         return 0
 
     roman = {'I':1,'V':5,'X':10,'L':50,
-             'C':100,'D':500,'M':1000,
-             'IV':4,'IX':9,'XL':40,'XC':90,
-             'CD':400,'CM':900}
-    i = 0
-    number = 0
-    while i < len(roman_string):
-        if i + 1 < len(roman_string) and roman_string[i:i+2] in roman:
-            number += roman[roman_string[i:i+2]]
-            i += 2
+             'C':100,'D':500,'M':1000}
+
+    last_seen = "I"
+    num = 0
+
+    for numeral in roman_string[::-1]:
+        if (roman[numeral] < roman[last_seen]):
+            num -= roman[numeral]
         else:
-            number += roman[roman_string[i]]
-            i += 1
-    return number
+            num += roman[numeral]
+        last_seen = numeral
+
+    return num
+
+
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
