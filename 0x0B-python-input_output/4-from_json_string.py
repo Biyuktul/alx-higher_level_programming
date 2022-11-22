@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""a program that returns an object (Python data structure) represented by a JSON string: """
+"""a program that returns an object (Python data structure)
+    represented by a JSON string: """
 import json
 
 
