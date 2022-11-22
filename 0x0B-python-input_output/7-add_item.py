@@ -8,9 +8,6 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-with open("add_item.json", 'a') as jsn:
-    new_list = []
-    n = len(sys.argv)
-    for i in range(0, n):
-        new_list.append(sys.argv[i])
-    jsn.write(save_to_json_file(new_list))
+open("add_item.json", 'a')
+i = load_from_json_file("add_item.json")
+save_to_json_file(i + sys.argv[1:], "add_item.json")
