@@ -40,3 +40,4 @@ def matrix_divided(matrix, div):
         temp_list = []
 
     return new_list
+
