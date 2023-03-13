@@ -1,5 +1,5 @@
 #!/bin/bash
-$PYFILE = $1
+
 python -m compileall $PYFILE
-$PYFILEc = "${PYFILE%.*}.pyc"
-mv $PYFILE __pycache__/$PYFILEc
+OUTPUT_FILENAME="${PYFILE%.*}.pyc"
+mv $PYFILE __pycache__/$OUTPUT_FILENAME
