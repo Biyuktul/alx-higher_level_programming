@@ -1,2 +1,5 @@
 #!/bin/bash
-python3 $PYFILE
+$PYFILE = $1
+python -m compileall $PYFILE
+$PYFILEc = "${PYFILE%.*}.pyc"
+mv $PYFILE __pycache__/$PYFILEc
