@@ -2,10 +2,12 @@
 def best_score(a_dictionary):
     if a_dictionary is None:
         return None
-    max_key = ''
-    max_int = 0
-    for k, v in a_dictionary.items():
-        if v > max_int:
-            max_int = v
-            max_key = k
-    return max_key
+    return max(a_dictionary, key=a_dictionary.get)
+
+
+a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
+best_key = best_score(a_dictionary)
+print("Best score: {}".format(best_key))
+
+best_key = best_score(None)
+print("Best score: {}".format(best_key))
