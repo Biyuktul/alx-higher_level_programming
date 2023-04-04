@@ -64,7 +64,7 @@ class Rectangle:
             return ""
         square = []
         for i in range(self.__height):
-            square.append(str(self.print_symbol) * self.__width)
+            [square.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 square.append("\n")
         return "".join(square)
@@ -77,7 +77,3 @@ class Rectangle:
         """detects deletion of a rectangle"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-
-myrectangle1 = Rectangle(8, 4)
-print(myrectangle1)
