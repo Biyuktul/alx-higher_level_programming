@@ -57,9 +57,9 @@ class Rectangle:
 
     def __str__(self):
         """prints the rectangle with the character #"""
-        square = ""
         if self.width == 0 or self.height == 0:
-            return square
+            return ""
+        square = ""
         for i in range(self.height):
             for j in range(self.width):
                 square += "#"
