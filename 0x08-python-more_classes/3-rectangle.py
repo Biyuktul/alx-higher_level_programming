@@ -75,6 +75,3 @@ class Rectangle:
                 square += "#"
             square += "\n"
         return square
-
-myrectangle = Rectangle(2, 4)
-print(repr(myrectangle))
