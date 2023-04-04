@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """a module with Rectangle class"""
+
+
 class Rectangle:
     """
     Rectangle class contains two private instance properties
