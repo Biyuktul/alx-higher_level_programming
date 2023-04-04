@@ -60,7 +60,7 @@ class Rectangle:
             return ""
         square = []
         for i in range(self.__height):
-            for j in range(self.__width):
-                square.append("#")
-            square.append("\n")
+            [square.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                square.append("\n")
         return "".join(square)
