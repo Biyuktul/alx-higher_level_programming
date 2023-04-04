@@ -56,11 +56,11 @@ class Rectangle:
 
     def __str__(self):
         """prints the rectangle with the character #"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
         square = []
-        for i in range(self.height):
-            for j in range(self.width):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 square.append("#")
             square.append("\n")
         return "".join(square)
