@@ -52,16 +52,29 @@ class Rectangle:
         result = 0
         if self.__width != 0 and self.__height != 0:
             result = 2 * (self.__width + self.__height)
-
         return result
 
     def __str__(self):
         """prints the rectangle with the character #"""
+        square = ""
         if self.width == 0 or self.height == 0:
             return ""
-        square = ""
         for i in range(self.height):
             for j in range(self.width):
                 square += "#"
             square += "\n"
         return square
+
+    def __repr__(self):
+        """prints the rectangle with the character #"""
+        square = ""
+        if self.width == 0 or self.height == 0:
+            return ""
+        for i in range(self.height):
+            for j in range(self.width):
+                square += "#"
+            square += "\n"
+        return square
+
+myrectangle = Rectangle(2, 4)
+print(repr(myrectangle))
