@@ -1,3 +1,3 @@
-#!/usr/bin/pyhon3
-def copy_list(myl):
-    return myl[:]
+#!/usr/bin/python3
+def copy_list(l):
+    return l[:]
