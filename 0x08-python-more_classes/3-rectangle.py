@@ -68,10 +68,10 @@ class Rectangle:
     def __repr__(self):
         """prints the rectangle with the character #"""
         square = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        for i in range(self.height):
-            for j in range(self.width):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 square += "#"
             square += "\n"
         return square
