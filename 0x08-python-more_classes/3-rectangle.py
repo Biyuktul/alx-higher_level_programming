@@ -65,13 +65,3 @@ class Rectangle:
             square += "\n"
         return square
 
-    def __repr__(self):
-        """prints the rectangle with the character #"""
-        square = ""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                square += "#"
-            square += "\n"
-        return square
