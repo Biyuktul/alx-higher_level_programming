@@ -4,9 +4,7 @@
 
 class Rectangle:
     """
-    Rectangle class contains two private instance properties
-    :width: width of the rectangle
-    :height: height of the rectangle
+    this class has private width and height instance properties
     """
     def __init__(self, width=0, height=0):
         self.__width = width
