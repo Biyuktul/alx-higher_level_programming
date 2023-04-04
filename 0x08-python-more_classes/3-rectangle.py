@@ -64,4 +64,3 @@ class Rectangle:
                 square += "#"
             square += "\n"
         return square
-
