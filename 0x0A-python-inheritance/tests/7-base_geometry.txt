@@ -40,3 +40,15 @@ Exception: area() is not implemented
 Traceback (most recent call last):
 ...
 TypeError: yon must be an integer
+
+# Test case 8: area with parameter
+>>> bg.area(12)
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+
+ # Test 9: no positional argument
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
