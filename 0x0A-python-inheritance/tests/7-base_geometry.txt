@@ -34,3 +34,9 @@ ValueError: height must be greater than 0
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+# Test case 7: boolean passed
+>>> bg.integer_validator("yon", True)
+Traceback (most recent call last):
+...
+TypeError: yon must be an integer
