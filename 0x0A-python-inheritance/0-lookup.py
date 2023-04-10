@@ -5,8 +5,9 @@ attributes and methods of an object"""
 
 def lookup(obj):
     """
-    looks for available attributes of an object
-    :param obj: the object to look for
-    :return: a list of available attribute and methods
+    Returns a list of all attributes and methods of an object.
     """
-    return list(dir(obj))
+    # Get a list of all attributes and methods of the object
+    obj_members = dir(obj)
+
+    return obj_members
