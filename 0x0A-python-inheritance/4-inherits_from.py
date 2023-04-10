@@ -11,4 +11,4 @@ def inherits_from(obj, a_class):
     :return: True if obj is instance of a class that inherited from a_class\
     False otherwise
     """
-    return issubclass(obj.__class__, a_class)
+    return issubclass(obj.__class__, a_class) and obj.__class__ != a_class
