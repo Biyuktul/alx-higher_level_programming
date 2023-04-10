@@ -11,8 +11,7 @@ class BaseGeometry:
         """raises Exception"""
         raise Exception("area() is not implemented")
 
-    @staticmethod
-    def integer_validator(name, value):
+    def integer_validator(self, name, value):
         """
         validates value
         :param name: the name
