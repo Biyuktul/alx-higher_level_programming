@@ -9,4 +9,4 @@ def lookup(obj):
     :param obj: the object to look for
     :return: a list of available attribute and methods
     """
-    return dir(obj)
+    return list(dir(obj))
