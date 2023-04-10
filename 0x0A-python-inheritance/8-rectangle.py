@@ -12,7 +12,7 @@ class Rectangle(BaseGeometry):
     - height (int): The height of the rectangle.
 
     Methods:
-    - __init__(self, width, height): Initializes a new instance of the Rectangle class.
+    - __init__(self, width, height): Initializes a new instance.
     - area(self): Calculates the area of the rectangle.
     - integer_validator(self): Validates width and height of the rectangle
     """
