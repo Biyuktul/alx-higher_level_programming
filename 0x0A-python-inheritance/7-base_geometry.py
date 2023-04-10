@@ -4,11 +4,15 @@
 
 class BaseGeometry:
     """defines area public instance method"""
+    def __init__(self):
+        pass
+
     def area(self):
         """raises Exception"""
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name, value):
+    @staticmethod
+    def integer_validator(name, value):
         """
         validates value
         :param name: the name
