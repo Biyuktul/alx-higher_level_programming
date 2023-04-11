@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-import json
+"""
+reads content from a file and appends to it and\
+then writes to the file
+"""
 import sys
 from os import path
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
