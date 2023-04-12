@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""defines a function matrix_divided"""
+
+
 def matrix_divided(matrix, div):
     """
     a function that divides each element of a list
@@ -14,7 +17,8 @@ def matrix_divided(matrix, div):
         if isinstance(div, (int, float)):
             for i in matrix:
                 if len(i) != len(matrix[0]):
-                    raise TypeError("Each row of the matrix must have the same size")
+                    raise TypeError("Each row of the matrix\
+                    must have the same size")
                 row = []
                 for j in i:
                     row.append(round(j / div, 2))
@@ -26,7 +30,8 @@ def matrix_divided(matrix, div):
 
 def is_list_of_lis_of_int_or_float(x):
     """
-    a function that checks whether a variable is a list of lists of int or float
+    a function that checks whether a variable is a list of\
+    lists of int or float
     :param x: the variable tobe checked
     :return: True if it is, otherwise False
     """
@@ -35,8 +40,10 @@ def is_list_of_lis_of_int_or_float(x):
             for j in i:
                 if not isinstance(j, (int, float)):
                     raise TypeError(
-                        "matrix must be a matrix (list of lists) of integers/floats"
+                        "matrix must be a matrix (list of lists) of\
+                        integers/floats"
                     )
     else:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists)\
+        of integers/floats")
     return True
