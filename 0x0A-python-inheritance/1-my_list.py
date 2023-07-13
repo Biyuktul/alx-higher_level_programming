@@ -3,7 +3,7 @@
 
 
 class MyList(list):
-    """class that inherits from list"""
+    """class that inherits from list class"""
 
     def print_sorted(self):
         """prints a sorted version of given list"""
