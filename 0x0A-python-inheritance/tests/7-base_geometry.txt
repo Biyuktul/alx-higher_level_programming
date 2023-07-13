@@ -17,6 +17,12 @@ Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
 
+# Test case 4: positional argument missing
+>>> bg.integer_validator("height")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
 # Test case 5: passing negative number
 >>> bg.integer_validator("height", -5)
 Traceback (most recent call last):
