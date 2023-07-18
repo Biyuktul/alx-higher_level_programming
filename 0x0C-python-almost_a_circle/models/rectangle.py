@@ -82,6 +82,7 @@ class Rectangle(Base):
             [print("")]
 
     def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
@@ -89,7 +90,10 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """
         updates the instances state
-        @args: a tuple containing the values
+
+        Args:
+            args: a tuple containing the values
+            **kwargs: dictionary like object contains key value pairs
         """
         if not args and len(args) == 0:
             self.id = kwargs.get('id', self.id)
