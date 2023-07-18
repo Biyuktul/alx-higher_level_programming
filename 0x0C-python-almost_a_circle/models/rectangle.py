@@ -112,5 +112,4 @@ class Rectangle(Base):
         method to represent the Rectangle as dictionary
         :return: dicttionary repr of the rectangle
         """
-        return {'id': self.id, 'y': self.y, 'x': self.x,
-                'height': self.height, 'width': self.width}
+        return {'id': self.id, 'y': self.y, 'x': self.x, 'height': self.height, 'width': self.width}
